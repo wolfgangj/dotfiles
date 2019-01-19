@@ -11,6 +11,10 @@
  '(css-indent-offset 2)
  '(custom-enabled-themes (quote (manoj-dark)))
  '(inhibit-startup-screen t)
+ '(ls-lisp-dirs-first t)
+ '(ls-lisp-format-time-list (quote ("" "")))
+ '(ls-lisp-use-localized-time-format t)
+ '(ls-lisp-verbosity nil)
  '(major-mode (quote text-mode))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
@@ -48,6 +52,9 @@
 ;; to remove tabs: C-x h (to mark all), then M-x untabify
 
 ;(require 'whitespace) ; M-x whitespace-mode
+
+(require 'ls-lisp)
+(setq ls-lisp-use-insert-directory-program nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
