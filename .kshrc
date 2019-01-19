@@ -4,7 +4,7 @@ curr_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1='\[\e[0m\]\u@\h:\[\e[37m\]\w \[\e[33m\]$(curr_branch)\[\e[37m\]\$\[\e[0m\] ' 
+PS1='\[\e[0m\]\u@\h:\[\e[37m\]\w \[\e[33m\]$(curr_branch)\[\e[37m\]\$\[\e[0m\] '
 export PS1
 
 alias ..='cd ..'

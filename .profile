@@ -2,7 +2,9 @@
 
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 PAGER=less
-LESS='-R -P%lb/%L'
+# with -R instead of -r, "less" had trouble with UTF-8 when $LANG was
+# just en_US.  However, setting it to en_US.UTF-8 makes "man" break.
+LESS='-r -P%lb/%L'
 EDITOR=mg
 export PATH HOME TERM PS1 PAGER LESS EDITOR
 
