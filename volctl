@@ -1,0 +1,22 @@
+#!/bin/sh
+
+OLD=$(mixerctl -n outputs.master)
+VOL_L=$(echo $OLD | cut -f 1 -d,)
+VOL_R=$(echo $OLD | cut -f 2 -d,)
+
+for cmd in $(echo $1 | sed -E -e 's/(.)/ \1/g')
+do
+    case $cmd in
+        +)
+            VOL_L=$(expr $VOL_L + 10)
+            VOL_R=$(expr $VOL_R + 10)
+            ;;
+        -)
+            VOL_L=$(expr $VOL_L - 10)
+            VOL_R=$(expr $VOL_R - 10)
+            ;;
+    esac
+done
+
+NEW=$VOL_L,$VOL_R
+mixerctl -n outputs.master=$NEW

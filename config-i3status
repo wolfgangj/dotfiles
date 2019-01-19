@@ -1,0 +1,27 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 6
+        color_good = "#00CC00"
+        color_degraded = "#CCCC00"
+        color_bad = "#CC0000"
+}
+
+order += "battery 0"
+order += "time"
+
+battery 0 {
+        format = "%percentage%status "
+        format_down = ""
+        integer_battery_capacity = true
+        status_chr = " +"
+        status_bat = " -"
+        status_unk = ""
+        status_full = ""
+        low_threshold = 15
+        threshold_type = percentage
+}
+
+time {
+       format = " %H:%M"
+}
