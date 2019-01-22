@@ -1,10 +1,10 @@
-# sh/ksh initialization
+# sh/ksh initialization on login
 
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 PAGER=less
-# with -R instead of -r, "less" had trouble with UTF-8 when $LANG was
-# just en_US.  However, setting it to en_US.UTF-8 makes "man" break.
-LESS='-r -P%lb/%L'
+# remember to skip to next search match in less with 'n'
+# (or change direction w/ 'N').
+LESS='-R -a -n -i -j3 -P%lb/%L'
 EDITOR=mg
 export PATH HOME TERM PS1 PAGER LESS EDITOR
 
