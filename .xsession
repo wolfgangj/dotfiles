@@ -2,7 +2,7 @@
 xset -b
 xmodmap ~/.Xmodmap
 xset +fp /usr/local/share/fonts/ghostscript/
-export LANG=UTF-8
+export LANG=en_US.UTF-8
 
 # make trackpoint scroll!
 xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation" 1

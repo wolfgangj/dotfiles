@@ -14,6 +14,7 @@ alias la='ls -a'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias psa='ps -A'
+alias man='man -T ascii'
 
 alias e=emacs
 alias e.='emacs . &'
