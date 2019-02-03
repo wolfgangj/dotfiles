@@ -85,6 +85,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'halt -p ?' -b 'Yes' 'doas halt -p'"
 
+bindsym $mod+w exec "chrome
+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
