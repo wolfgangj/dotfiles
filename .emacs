@@ -16,6 +16,7 @@
  '(ls-lisp-use-localized-time-format t)
  '(ls-lisp-verbosity nil)
  '(major-mode (quote text-mode))
+ '(rainbow-delimiters-max-face-count 9)
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -30,7 +31,9 @@
  '(rainbow-delimiters-depth-4-face ((t (:inherit rainbow-delimiters-base-face :foreground "peru"))))
  '(rainbow-delimiters-depth-5-face ((t (:inherit rainbow-delimiters-base-face :foreground "dark magenta"))))
  '(rainbow-delimiters-depth-6-face ((t (:inherit rainbow-delimiters-base-face :foreground "chartreuse"))))
- '(rainbow-delimiters-depth-7-face ((t (:inherit rainbow-delimiters-base-face :foreground "orange")))))
+ '(rainbow-delimiters-depth-7-face ((t (:inherit rainbow-delimiters-base-face :foreground "orange"))))
+ '(rainbow-delimiters-depth-8-face ((t (:inherit rainbow-delimiters-base-face :foreground "cornflower blue"))))
+ '(rainbow-delimiters-depth-9-face ((t (:inherit rainbow-delimiters-base-face :foreground "magenta")))))
 
 (require 'package)
 (add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/") t)
