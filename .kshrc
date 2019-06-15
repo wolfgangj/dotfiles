@@ -15,16 +15,23 @@ alias mkdir='mkdir -p'
 alias df='df -h'
 alias psa='ps -A'
 alias man='man -T ascii'
+alias cal='cal -m'
 
 alias e=emacs
 alias e.='emacs . &'
+
+# tcw = "this commit will ..."
+tcw() {
+  git commit -m "$*"
+}
+amend() {
+  git commit --amend -m "$*"
+}
 
 alias s='git status'
 alias add='git add'
 alias addu='git add -u'
 alias adda='git add -A'
-# tcw = "this commit will ..."
-alias tcw='git commit -m'
 alias push='git push'
 alias pull='git pull'
 alias co='git checkout'
@@ -33,3 +40,4 @@ alias log='git log'
 alias d='git diff'
 alias ds='git diff --staged'
 alias merge='git merge'
+alias blame='git blame'
