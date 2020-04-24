@@ -16,6 +16,7 @@ alias df='df -h'
 alias psa='ps -A'
 alias man='man -T ascii'
 alias cal='cal -m'
+alias gdb='egdb'
 
 alias e=emacs
 alias e.='emacs . &'
