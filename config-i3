@@ -9,7 +9,7 @@ floating_modifier $mod
 
 bindsym $mod+Return exec /usr/X11R6/bin/xterm
 bindsym $mod+x kill
-bindsym $mod+m exec /usr/local/bin/dmenu_run
+bindsym $mod+e exec /usr/local/bin/dmenu_run
 
 # change focus
 bindsym $mod+Left focus left
@@ -29,7 +29,7 @@ bindsym $mod+l split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking # we use s for snapshots now
 bindsym $mod+t layout tabbed
 bindsym $mod+z layout toggle split
 
@@ -83,10 +83,14 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'halt -p ?' -b 'Yes' 'doas halt -p'"
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'halt -p ?' -B 'Yes' 'doas halt -p'"
 
+bindsym $mod+w exec "chrome"
 # can't use unveil when browsing local files
-bindsym $mod+w exec "chrome --disable-unveil"
+bindsym $mod+Shift+w exec "chrome --disable-unveil"
+
+# snapshot (does not work yet, .xsession-errors says it can't grab mouse, starting via xterm -e worked, but sucks)
+bindsym $mod+s exec "/bin/sh -c '/usr/X11R6/bin/xwd >~/Snapshots/`date '+%F_%H:%M'`.xwd'"
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
