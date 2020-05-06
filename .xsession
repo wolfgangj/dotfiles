@@ -14,5 +14,8 @@ export LANG=en_US.UTF-8
 
 mixerctl outputs.master=120,120
 
+# in /etc/X11/xenodm/Xsetup_0:
+# xsetroot -solid darkcyan
+
 #xterm &
 exec i3
