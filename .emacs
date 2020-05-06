@@ -206,11 +206,15 @@
 ;(push "~/.emacs.d/lisp" load-path)
 ;(require 'stic-mode)
 
-;; Forth and Assembly
-(setq auto-mode-alist (append '(("\\.s$" . fundamental-mode)
-                                ("\\.fth$" . fundamental-mode))
+;; Wok and Assembly
+(setq auto-mode-alist (append '(("\\.s$"   . fundamental-mode)
+                                ("\\.asm$" . fundamental-mode)
+                                ("\\.wok$" . fundamental-mode))
       auto-mode-alist))
 
 ;; JavaScript
 (setq js-indent-level 2)
 (setq js-switch-indent-offset 2)
+
+;; Ruby
+(setq ruby-insert-encoding-magic-comment nil)
