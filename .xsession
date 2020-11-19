@@ -17,5 +17,7 @@ mixerctl outputs.master=120,120
 # in /etc/X11/xenodm/Xsetup_0:
 # xsetroot -solid darkcyan
 
+~/bin/wbat /bin/sh -c 'i3-msg fullscreen disable; i3-nagbar -m "battery low"' &
+
 #xterm &
 exec i3
