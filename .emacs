@@ -130,7 +130,7 @@
 (global-set-key "\M-m"
                 (lambda ()
                   (interactive)
-                  (shell-command (format "cd %s && make"
+                  (shell-command (format "cd %s && gmake"
                                          (vc-find-root buffer-file-name "Makefile")))))
 
 ;; don't ask, just do it:
