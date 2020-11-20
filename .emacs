@@ -203,8 +203,8 @@
 (load-theme 'minimal-dark t)
 
 ;; stic
-;(push "~/.emacs.d/lisp" load-path)
-;(require 'stic-mode)
+(push "~/.emacs.d/lisp" load-path)
+(require 'stic-mode)
 
 ;; Wok and Assembly
 (setq auto-mode-alist (append '(("\\.s$"   . fundamental-mode)
