@@ -4,6 +4,9 @@ xmodmap ~/.Xmodmap
 xset +fp /usr/local/share/fonts/ghostscript/
 xset +fp /usr/local/share/fonts/noto
 xset +fp /usr/local/share/fonts/terminus
+xset +fp /usr/local/share/fonts/chinese
+xset +fp /usr/local/share/fonts/wqy
+
 
 export LANG=en_US.UTF-8
 
