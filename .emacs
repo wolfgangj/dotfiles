@@ -218,3 +218,11 @@
 
 ;; Ruby
 (setq ruby-insert-encoding-magic-comment nil)
+
+(require 'highlight-symbol)
+(add-hook 'prog-mode-hook (lambda () (highlight-symbol-mode)))
+(setq highlight-symbol-on-navigation-p t)
+(setq highlight-symbol-idle-delay 0)
+(global-set-key [f3] 'highlight-symbol-next)
+(global-set-key [(shift f3)] 'highlight-symbol-prev)
+
